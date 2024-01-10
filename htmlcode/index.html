@@ -314,17 +314,24 @@ $(document).on('input', '#invoice-item-table input', function() {
     /* Remove the extra character 'm' */
 }
 
-
 @media (min-width: 203px) and (max-width: 965px) {
+  /* ... Existing media query styles ... */
+
+  .table-bordered.card {
+    margin: 0 auto;
+    text-align: center; /* Center-align contents within the card */
+  }
+  
+  /* Add the following styles to center-align the table contents */
   #invoice-item-table {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
   }
 
   tr {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   th,
@@ -332,13 +339,7 @@ $(document).on('input', '#invoice-item-table input', function() {
     flex-basis: calc(33.33% - 10px);
     box-sizing: border-box;
   }
-
-  .table-bordered.card {
-    margin: 0 auto;
-  }
-
-
-
+  
   th:nth-child(1),
   td:nth-child(1) {
     flex-basis: calc(45% - 5px); /* Adjust the width for the first column */
